@@ -18,6 +18,16 @@
       flipped = !flipped;
     }
 
+    let orientation = true;
+    window.addEventListener('orientationchange', function(event) {
+      if (orientation) {
+        document.getElementsByClassName('.centerer')[0].style.minHeight = '100vw';
+      } else {
+        document.getElementsByClassName('.centerer')[0].style.minHeight = '100vh';  
+      }
+      orientation = !orientation
+    })
+
     // function flip_card_to_back() {
     //   document.getElementsByClassName('card-inner')[0]
     //     .style
