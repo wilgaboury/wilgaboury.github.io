@@ -20,10 +20,23 @@ body {
     box-sizing: border-box;
     padding: 20px;
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 
     background-color: transparent;
 }
+
+
+@media (orientation: landscape) {
+    .centerer {
+      min-height: 100vw;
+    }
+  }
+  
+  @media (orientation: portrait) {
+    .centerer {
+      min-height: 100vh;
+    }
+  }
 
 .card {
     width: 100%;
