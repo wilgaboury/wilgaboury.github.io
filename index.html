@@ -2,13 +2,21 @@
 <html lang="en">
 
 <head>
+  <!-- external-->
+  <script src="https://kit.fontawesome.com/94eb4d9bb2.js" crossorigin="anonymous"></script>
+
+  <!-- internal -->
   <link rel="stylesheet" href="styles.css">
 
   <script>
+    let hasFlipped = false;
+
     function flip_card_to_back() {
       document.getElementsByClassName('card-inner')[0]
         .style
-        .transform = 'rotateY(-180deg)';
+        .transform = hasFlipped ? 'rotateY(360deg)' : 'rotateY(0deg)';
+        // .transform = 'rotateY(-180deg)';
+        hasFlipped = !hasFlipped;
       }
       function flip_card_to_front() {
         document.getElementsByClassName('card-inner')[0]
@@ -22,14 +30,35 @@
   
 <div class="centerer">
   <div class="card">
-  <div class="card-inner">
-    <div class="card-front" onclick="flip_card_to_back()">
-      Text on the front side
+    <div class="card-inner">
+      <div class="card-front" onclick="flip_card_to_back()">
+        <div class="front-container">
+          <div class="front-top-container">
+            <span class="phone-number front-color">(215) 390-6114</span>
+            <div class="icons">
+              <a class="front-link front-color" href="mailto:wgaboury@gmail.com" onclick="event.stopPropagation()">
+                <i class="front-link-icon fas fa-envelope-square fa-3x"></i>
+              </a>
+              <a class="front-link front-color" href="https://github.com/wilgaboury" onclick="event.stopPropagation()">
+                <i class="front-link-icon fab fa-github fa-3x"></i>
+              </a>
+              <a class="front-link front-color" href="https://www.linkedin.com/in/wil-gaboury-487183166/" onclick="event.stopPropagation()">
+                <i class="front-link-icon fab fa-linkedin fa-3x"></i>
+              </a>
+            </div>
+          </div>
+          <div class="front-middle-container">
+            <div class="name-title-container">
+              <div class="name front-color">Wil Gaboury</div>
+              <div class="title front-color">Software Engineer</div>
+            </div>
+          </div>
+          <div class="address front-color">1201 Hunter Drive | Blue Bell PA, 19422</div>        
+        </div>
+      </div>
+      <div class="card-back"> <!-- onclick="flip_card_to_front()"> -->
+      </div>
     </div>
-    <div class="card-back" onclick="flip_card_to_front()">
-      Text on the back side snthoeusnth aoesntuhsnt haoeusnth aoesunth aoesnuth
-    </div>
-  </div>
   </div>
 </div>
 
