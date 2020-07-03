@@ -9,20 +9,27 @@
   <link rel="stylesheet" href="styles.css">
 
   <script>
-    let hasFlipped = false;
+    let flipped = true;
 
-    function flip_card_to_back() {
+    function flip_card() {
       document.getElementsByClassName('card-inner')[0]
         .style
-        .transform = hasFlipped ? 'rotateY(360deg)' : 'rotateY(0deg)';
-        // .transform = 'rotateY(-180deg)';
-        hasFlipped = !hasFlipped;
-      }
-      function flip_card_to_front() {
-        document.getElementsByClassName('card-inner')[0]
-          .style
-          .transform = 'rotateY(0deg)';
-      }
+        .transform = flipped ? 'rotateY(-360deg)' : 'rotateY(0deg)';
+      flipped = !flipped;
+    }
+
+    // function flip_card_to_back() {
+    //   document.getElementsByClassName('card-inner')[0]
+    //     .style
+    //     .transform = 'rotateY(-180deg)';
+    //     hasFlipped = !hasFlipped;
+    // }
+
+    // function flip_card_to_front() {
+    //   document.getElementsByClassName('card-inner')[0]
+    //     .style
+    //     .transform = 'rotateY(0deg)';
+    // }
   </script>
 </head>
 
@@ -31,7 +38,7 @@
 <div class="centerer">
   <div class="card">
     <div class="card-inner">
-      <div class="card-front" onclick="flip_card_to_back()">
+      <div class="card-front" onclick="flip_card()">
         <div class="front-container">
           <div class="front-top-container">
             <span class="phone-number front-color">(215) 390-6114</span>

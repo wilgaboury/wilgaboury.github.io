@@ -90,6 +90,10 @@ body {
     font-size: 120%;
 }
 
+.icon {
+    cursor: pointer;
+}
+
 .front-middle-container {
     flex-grow: 1;
     display: flex;
@@ -116,4 +120,5 @@ body {
 .address {
     font-size: 130%;
     text-align: center;
+    height: 48px;
 }
