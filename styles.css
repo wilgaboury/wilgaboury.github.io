@@ -9,7 +9,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 .centerer {
@@ -87,7 +87,7 @@ body {
 }
 
 .card-back {
-    transform: rotateY(180deg)
+    transform: rotateY(180deg);
 }
 
 .front-color {

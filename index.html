@@ -9,13 +9,16 @@
   <link rel="stylesheet" href="styles.css">
 
   <script>
-    let flipped = true;
+    let deg = -180;
+    // let flipped = true;
 
     function flip_card() {
       document.getElementsByClassName('card-inner')[0]
         .style
-        .transform = flipped ? 'rotateY(-360deg)' : 'rotateY(0deg)';
-      flipped = !flipped;
+        .transform = `rotateY(${deg}deg)`;
+        // .transform = flipped ? 'rotateY(-360deg)' : 'rotateY(0deg)';
+      // flipped = !flipped;
+      deg = deg - 180;
 
       document.getElementById('click-me').style.display = 'none';
     }
@@ -53,7 +56,7 @@
           <div class="address front-color">1201 Hunter Drive | Blue Bell PA, 19422</div>        
         </div>
       </div>
-      <div class="card-back"> <!-- onclick="flip_card_to_front()"> -->
+      <div class="card-back" onclick="flip_card()">
       </div>
     </div>
   </div>
