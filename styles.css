@@ -93,7 +93,7 @@ body {
 .text-color {
     color: #997a00;
     font-weight: 600;
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 
 
@@ -115,9 +115,11 @@ body {
     font-size: 120%;
 }
 
-.icon {
+.front-link {
     cursor: pointer;
+    text-decoration: none;
 }
+
 
 .front-middle-container {
     flex-grow: 1;
@@ -163,6 +165,10 @@ body {
     align-items: center;
 }
 
+.bio-container > :not(:first-child) {
+    margin-top: 30px;
+}
+
 .portrait {
     background-image: url(portrait.jpg);
     background-size: cover;
@@ -173,7 +179,6 @@ body {
 }
 
 .bio-text {
-    margin-top: 30px;
     font-size: 120%;
     max-width: 350px;
     text-align: center;
@@ -190,14 +195,26 @@ body {
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-    padding: 10px 20px
-}
+    padding: 10px 20px;
 
-.lol-container {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.site-nav-container > :not(:first-child) {
+    margin-top: 30px;
+}
+
+.nav-link {
+    font-size: 150%;
+    padding: 6px;
+}
+
+.nav-link:hover {
+    padding: 4px;
+    border: 2px solid #997a00;
+    border-radius: 5px;
+    text-decoration: none;
 }
