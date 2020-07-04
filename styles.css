@@ -73,8 +73,8 @@ body {
     z-index: 50;
     position: absolute;
     text-align: center;
-    height: 35px;
-    width: 150px;
+    height: 32px;
+    width: 140px;
     overflow: auto;
     margin: auto;
     position: absolute;
@@ -100,7 +100,6 @@ body {
 .text-color {
     color: #997a00;
     font-weight: 600;
-    /* text-decoration: none; */
 }
 
 
