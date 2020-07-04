@@ -10,14 +10,8 @@
 
   <script>
     let deg = -180;
-    // let flipped = true;
-
     function flip_card() {
-      document.getElementsByClassName('card-inner')[0]
-        .style
-        .transform = `rotateY(${deg}deg)`;
-        // .transform = flipped ? 'rotateY(-360deg)' : 'rotateY(0deg)';
-      // flipped = !flipped;
+      document.getElementsByClassName('card-inner')[0].style.transform = `rotateY(${deg}deg)`;
       deg = deg - 180;
 
       document.getElementById('click-me').style.display = 'none';
@@ -34,29 +28,41 @@
         <div id="click-me">Click Me!</div>
         <div class="front-container">
           <div class="front-top-container">
-            <span class="phone-number front-color">(215) 390-6114</span>
+            <span class="phone-number text-color">(215) 390-6114</span>
             <div class="icons">
-              <a class="front-link front-color" href="mailto:wgaboury@gmail.com" onclick="event.stopPropagation()">
+              <a class="front-link text-color" href="mailto:wgaboury@gmail.com" onclick="event.stopPropagation()">
                 <i class="front-link-icon fas fa-envelope-square fa-3x"></i>
               </a>
-              <a class="front-link front-color" href="https://github.com/wilgaboury" onclick="event.stopPropagation()">
+              <a class="front-link text-color" href="https://github.com/wilgaboury" onclick="event.stopPropagation()">
                 <i class="front-link-icon fab fa-github fa-3x"></i>
               </a>
-              <a class="front-link front-color" href="https://www.linkedin.com/in/wil-gaboury-487183166/" onclick="event.stopPropagation()">
+              <a class="front-link text-color" href="https://www.linkedin.com/in/wil-gaboury-487183166/" onclick="event.stopPropagation()">
                 <i class="front-link-icon fab fa-linkedin fa-3x"></i>
               </a>
             </div>
           </div>
           <div class="front-middle-container">
             <div class="name-title-container">
-              <div class="name front-color">Wil Gaboury</div>
-              <div class="title front-color">Software Engineer</div>
+              <div class="name text-color">Wil Gaboury</div>
+              <div class="title text-color">Software Engineer</div>
             </div>
           </div>
-          <div class="address front-color">1201 Hunter Drive | Blue Bell PA, 19422</div>        
+          <div class="address text-color">1201 Hunter Drive | Blue Bell PA, 19422</div>        
         </div>
       </div>
       <div class="card-back" onclick="flip_card()">
+        <div class="back-container">
+          <div class="bio-container">
+            <div class="portrait"></div>
+            <div class="bio-text text-color">
+              I am a tenacious undergraduate computer science student, currently studying at the University of Maryland. I enjoy attending church, weightlifting and going on occational walks. Click below for some nice background music.
+            </div>
+            <iframe src="https://open.spotify.com/embed/track/3RghNoqP7d30odeBNZIuHM?si=Erui7FcWT5ahi3ZuLy3YtQ" 
+                    width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" style="margin-top: 30px"></iframe>
+          </div>
+          <div class="back-separator"></div>
+          <div class="site-nav-container"></div>
+        </div>
       </div>
     </div>
   </div>

@@ -90,7 +90,7 @@ body {
     transform: rotateY(180deg);
 }
 
-.front-color {
+.text-color {
     color: #997a00;
     font-weight: 600;
     text-decoration: none;
@@ -146,4 +146,45 @@ body {
     font-size: 130%;
     text-align: center;
     height: 48px;
+}
+
+.back-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.bio-container {
+    flex-grow: 1;
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.portrait {
+    background-image: url(portrait.jpg);
+    background-size: cover;
+
+    height: 250px;
+    width: 250px;
+    border-radius: 5px;
+}
+
+.bio-text {
+    margin-top: 30px;
+    font-size: 120%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.back-separator {
+    height: 100%;
+    border-left: 1px solid black;
+}
+
+.site-nav-container {
+    flex-grow: 1;
+    flex-basis: 50%;
 }
