@@ -5,16 +5,15 @@
   <meta charset="utf-8"/>
 
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="career.css">
 
   <script>
     function static_video() {
-      document.getElementsByTagName('source')[0].src = 'images/static.webm';
-      document.getElementsByTagName('video')[0].load();
+      document.getElementsByClassName('company-logo')[0].setAttribute('src', 'images/glitch.gif');
       console.log('moused over');
     }
     function normal_video() {
-      document.getElementsByTagName('source')[0].src = 'images/feith_logo_computer_screen.webm';
-      document.getElementsByTagName('video')[0].load();
+      document.getElementsByClassName('company-logo')[0].setAttribute('src', 'images/feith_logo_computer_screen.gif');
       console.log('moused out')
     }
   </script>
@@ -22,9 +21,9 @@
 
 <body>
   <div class="video-container">
-    <video autoplay loop muted height="300px" width="300px" onmouseover="static_video()" onmouseout="normal_video()" style="cursor: pointer;">
-      <source src="images/feith_logo_computer_screen.webm" type="video/webm">
-    </video>
+    <div class="computer-monitor">
+      <img class="company-logo" src="images/feith_logo_computer_screen.gif" onmouseover="static_video()" onmouseout="normal_video()" style="cursor: pointer;"/>
+    </div>
   </div>
 </body>
 

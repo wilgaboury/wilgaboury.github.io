@@ -1,0 +1,24 @@
+.computer-monitor {
+    background-image: url(images/computer_monitor.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 50%;
+    padding-top: 55%;
+
+    position: relative;
+}
+
+.company-logo {
+    height: 59.5%;
+    width: 74%;
+
+    position: absolute;
+    top: 10.5%;
+    left: 13%;
+
+    border-radius: 6px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
