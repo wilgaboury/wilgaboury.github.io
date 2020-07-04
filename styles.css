@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-    background-image: url(green_background.jpeg);
+    background-image: url(main_screen_background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -34,6 +34,8 @@ body {
     perspective: 1000px;
 }
 
+
+
 .card-inner {
     position: relative;
     width: 100%;
@@ -59,6 +61,29 @@ body {
 }
 
 .card-front {
+}
+
+@keyframes click-me-anim {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+
+#click-me {
+    z-index: 50;
+    position: absolute;
+    top: 130px;
+    left: 43%;
+    background-color: rgb(65, 65, 65);
+    opacity: 0.75;
+    border-radius: 5px;
+    font-size: 150%;
+    font-weight: 700;
+    animation-name: click-me-anim;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    padding: 5px;
+    color: white;
 }
 
 .card-back {

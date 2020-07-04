@@ -16,6 +16,8 @@
         .style
         .transform = flipped ? 'rotateY(-360deg)' : 'rotateY(0deg)';
       flipped = !flipped;
+
+      document.getElementById('click-me').style.display = 'none';
     }
   </script>
 </head>
@@ -26,6 +28,7 @@
   <div class="card">
     <div class="card-inner">
       <div class="card-front" onclick="flip_card()">
+        <div id="click-me">Click Me!</div>
         <div class="front-container">
           <div class="front-top-container">
             <span class="phone-number front-color">(215) 390-6114</span>
