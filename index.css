@@ -208,11 +208,14 @@ body {
 
 .nav-link {
     font-size: 150%;
-    padding: 6px;
 }
 
-.nav-link:hover {
-    padding: 4px;
+.hover-border {
+    padding: 5px;
+}
+
+.hover-border:hover {
+    padding: 3px;
     border: 2px solid #997a00;
     border-radius: 5px;
     text-decoration: none;
