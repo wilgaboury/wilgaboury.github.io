@@ -24,13 +24,19 @@ body {
     width: 100%;
 }
 
+#zig-zag-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
 .computer-monitor {
     background-image: url(images/computer_monitor.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 
-    width: 50%;
-    padding-top: 55%;
+    width: 100%;
+    /* padding-top: 55%; */
+    height: 500px;
 
     position: relative;
 }

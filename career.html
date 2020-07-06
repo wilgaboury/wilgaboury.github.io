@@ -8,18 +8,69 @@
   <link rel="stylesheet" href="career.css">
 
   <script>
-    function static_video() {
-      document.getElementsByClassName('company-logo')[0].setAttribute('src', 'images/glitch.gif');
-      console.log('moused over');
+    function display_glitch_gif(elem) {
+      elem.setAttribute('src', 'images/glitch.gif');
     }
-    function normal_video() {
-      document.getElementsByClassName('company-logo')[0].setAttribute('src', 'images/feith_logo_computer_screen.gif');
-      console.log('moused out')
+
+    function display_gif(elem, loc) {
+      elem.setAttribute('src', loc);
     }
+
+    const CHANGE_WIDTH = 600;
+    let is_zig_zag;
+    function screen_resize() {
+      if (is_zig_zag && window.innerWidth <= CHANGE_WIDTH) {
+        change_from_zig_zag();
+      } else if (!is_zig_zag && window.innerWidth > CHANGE_WIDTH) {
+        change_to_zig_zag();
+      }
+    }
+
+    function change_to_zig_zag() {
+      is_zig_zag = true;
+
+      let is_odd = true;
+      let row_num = 1;
+      for (let child of document.getElementById('zig-zag-container').children) {
+        child.style.gridRowStart = `${row_num}`;
+        child.style.gridRowEnd = `${row_num + 2}`;
+        if (is_odd) {
+          child.style.gridColumnStart = '1';
+          child.style.gridColumnEnd = '2';
+        } else {
+          child.style.gridColumnStart = '2';
+          child.style.gridColumnEnd = '3';
+        }
+
+        row_num++;
+        is_odd = !is_odd;
+      }
+    }
+
+    function change_from_zig_zag() {
+      is_zig_zag = false;
+
+      let row_num = 1;
+      for (let child of document.getElementById('zig-zag-container').children) {
+        child.style.gridRowStart = `${row_num}`;
+        child.style.gridRowEnd = `${row_num + 2}`;
+        child.style.gridColumnStart = '1';
+        child.style.gridColumnEnd = '3';
+        row_num += 2;
+      }
+    }
+
+    window.addEventListener('load', function(event) {
+      if (window.innerWidth > CHANGE_WIDTH) {
+        change_to_zig_zag();
+      } else {
+        change_from_zig_zag();
+      }
+    });
   </script>
 </head>
 
-<body>
+<body onresize="screen_resize()"> 
   <div class="career-title-container career-title-height">
     <img class="career-title" src="images/career.png"/>
     <span style="font-weight: 1000; font-family: Arial; color: #2c23b5; font-size: 20px; text-align: center;">
@@ -27,8 +78,25 @@
     </span>
   </div>
   <div class="career-title-height"></div>
-  <div class="computer-monitor">
-    <img class="company-logo" src="images/feith_logo_computer_screen.gif" onmouseover="static_video()" onmouseout="normal_video()" style="cursor: pointer;"/>
+  <div id="zig-zag-container">
+    <div class="computer-monitor">
+      <img class="company-logo" 
+           src="images/feith_logo_computer_screen.gif" 
+           onmouseover="display_glitch_gif(this)" 
+           onmouseout="display_gif(this, 'images/feith_logo_computer_screen.gif')"/>
+    </div>
+    <div class="computer-monitor">
+      <img class="company-logo" 
+           src="images/feith_logo_computer_screen.gif" 
+           onmouseover="display_glitch_gif(this)" 
+           onmouseout="display_gif(this, 'images/feith_logo_computer_screen.gif')"/>
+    </div>
+    <div class="computer-monitor">
+      <img class="company-logo" 
+           src="images/feith_logo_computer_screen.gif" 
+           onmouseover="display_glitch_gif(this)" 
+           onmouseout="display_gif(this, 'images/feith_logo_computer_screen.gif')"/>
+    </div>
   </div>
 </body>
 
