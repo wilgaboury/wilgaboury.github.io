@@ -7,6 +7,13 @@ body {
     overflow-y: auto;
 }
 
+.primary-text {
+    color: #2c23b5;
+    font-weight: bold;
+    font-family: Arial;
+    /* color: rgb(44, 35, 181); */
+}
+
 .career-title-container {
     position: fixed;
     top: 0;
@@ -29,14 +36,21 @@ body {
     grid-template-columns: 50% 50%;
 }
 
+.company-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
 .computer-monitor {
     background-image: url(images/computer_monitor.png);
     background-repeat: no-repeat;
     background-size: cover;
 
-    width: 100%;
-    /* padding-top: 55%; */
-    height: 500px;
+    width: 60%;
+    padding-top: 66%;
 
     position: relative;
 }
@@ -53,4 +67,25 @@ body {
 
     margin-left: auto;
     margin-right: auto;
+
+    cursor: pointer;
+}
+
+.company-position-container {
+    background-color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.company-name {
+    font-size: 40px;
+}
+
+.position-title {
+    font-size: 30px;
+}
+
+.position-time-period {
+    font-size: 30px;
 }
