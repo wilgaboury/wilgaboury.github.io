@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="career.css">
@@ -16,12 +17,12 @@
       elem.setAttribute('src', loc);
     }
 
-    const CHANGE_WIDTH = 800;
+    const CHANGE_WIDTH = 700;
     let is_zig_zag;
     function screen_resize() {
-      if (is_zig_zag && window.innerWidth <= CHANGE_WIDTH) {
+      if (is_zig_zag && window.innerWidth/window.devicePixelRatio <= CHANGE_WIDTH) {
         change_from_zig_zag();
-      } else if (!is_zig_zag && window.innerWidth > CHANGE_WIDTH) {
+      } else if (!is_zig_zag && window.innerWidth/window.devicePixelRatio > CHANGE_WIDTH) {
         change_to_zig_zag();
       }
     }
@@ -61,7 +62,8 @@
     }
 
     window.addEventListener('load', function(event) {
-      if (window.innerWidth > CHANGE_WIDTH) {
+      console.log(window.innerWidth);
+      if (window.innerWidth/window.devicePixelRatio > CHANGE_WIDTH) {
         change_to_zig_zag();
       } else {
         change_from_zig_zag();
