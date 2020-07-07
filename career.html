@@ -69,68 +69,104 @@
         change_from_zig_zag();
       }
     });
+
+    function open_modal(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function close_modal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+
+    function stop_propegation(event) {
+      event.stopPropegation();
+    }
+
+    window.addEventListener('load', function(event) {
+      for (let elem of document.getElementsByClassName('modal-container')) {
+        elem.addEventListener('click', function(event) {
+          event.stopPropagation();
+        });
+      }
+    });
   </script>
 </head>
 
-<body onresize="screen_resize()"> 
-  <div class="career-title-container career-title-height">
-    <img class="career-title" src="images/career.png"/>
-    <span class="primary-text" style="font-weight: 1000; font-family: Arial; font-size: 20px; text-align: center;">
-      Click on monitors for more information.
-    </span>
+<body onresize="screen_resize()">
+  <div style="height: 100%; width: 100%;">
+    <div class="career-title-container career-title-height">
+      <img class="career-title" src="images/career.png"/>
+      <span class="primary-text" style="font-weight: 1000; font-family: Arial; font-size: 20px; text-align: center;">
+        Click on monitors for more information.
+      </span>
+    </div>
+    <div class="career-title-height"></div>
+    <div id="zig-zag-container">
+      <div class="company-container">
+        <div class="computer-monitor">
+          <img class="company-logo" 
+              src="images/feith_logo_computer_screen.gif" 
+              onmouseover="display_glitch_gif(this)" 
+              onmouseout="display_gif(this, 'images/feith_logo_computer_screen.gif')"
+              onclick="open_modal('feith-modal')"/>
+        </div>
+        <div class="company-position-container">
+          <div class="company-name primary-text">Feith Systems</div>
+          <div class="position-title primary-text">Software Engineer Intern</div>
+          <div class="position-time-period primary-text">2016 to Present</div>
+        </div>
+      </div>
+      <div class="company-container">
+        <div class="computer-monitor">
+          <img class="company-logo" 
+              src="images/feith_logo_computer_screen.gif" 
+              onmouseover="display_glitch_gif(this)" 
+              onmouseout="display_gif(this, 'images/feith_logo_computer_screen.gif')"/>
+        </div>
+        <div class="company-position-container">
+          <div class="company-name primary-text">Feith Systems</div>
+          <div class="position-title primary-text">Software Engineer Intern</div>
+          <div class="position-time-period primary-text">2016 to Present</div>
+        </div>
+      </div>
+      <div class="company-container">
+        <div class="computer-monitor">
+          <img class="company-logo" 
+              src="images/feith_logo_computer_screen.gif" 
+              onmouseover="display_glitch_gif(this)" 
+              onmouseout="display_gif(this, 'images/feith_logo_computer_screen.gif')"/>
+        </div>
+        <div class="company-position-container">
+          <div class="company-name primary-text">Feith Systems</div>
+          <div class="position-title primary-text">Software Engineer Intern</div>
+          <div class="position-time-period primary-text">2016 to Present</div>
+        </div>
+      </div>
+      <div class="company-container">
+        <div class="computer-monitor">
+          <img class="company-logo" 
+              src="images/feith_logo_computer_screen.gif" 
+              onmouseover="display_glitch_gif(this)" 
+              onmouseout="display_gif(this, 'images/feith_logo_computer_screen.gif')"/>
+        </div>
+        <div class="company-position-container">
+          <div class="company-name primary-text">Feith Systems</div>
+          <div class="position-title primary-text">Software Engineer Intern</div>
+          <div class="position-time-period primary-text">2016 to Present</div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="career-title-height"></div>
-  <div id="zig-zag-container">
-    <div class="company-container">
-      <div class="computer-monitor">
-        <img class="company-logo" 
-            src="images/feith_logo_computer_screen.gif" 
-            onmouseover="display_glitch_gif(this)" 
-            onmouseout="display_gif(this, 'images/feith_logo_computer_screen.gif')"/>
-      </div>
-      <div class="company-position-container">
-        <div class="company-name primary-text">Feith Systems</div>
-        <div class="position-title primary-text">Software Engineer Intern</div>
-        <div class="position-time-period primary-text">2016 to Present</div>
-      </div>
-    </div>
-    <div class="company-container">
-      <div class="computer-monitor">
-        <img class="company-logo" 
-            src="images/feith_logo_computer_screen.gif" 
-            onmouseover="display_glitch_gif(this)" 
-            onmouseout="display_gif(this, 'images/feith_logo_computer_screen.gif')"/>
-      </div>
-      <div class="company-position-container">
-        <div class="company-name primary-text">Feith Systems</div>
-        <div class="position-title primary-text">Software Engineer Intern</div>
-        <div class="position-time-period primary-text">2016 to Present</div>
-      </div>
-    </div>
-    <div class="company-container">
-      <div class="computer-monitor">
-        <img class="company-logo" 
-            src="images/feith_logo_computer_screen.gif" 
-            onmouseover="display_glitch_gif(this)" 
-            onmouseout="display_gif(this, 'images/feith_logo_computer_screen.gif')"/>
-      </div>
-      <div class="company-position-container">
-        <div class="company-name primary-text">Feith Systems</div>
-        <div class="position-title primary-text">Software Engineer Intern</div>
-        <div class="position-time-period primary-text">2016 to Present</div>
-      </div>
-    </div>
-    <div class="company-container">
-      <div class="computer-monitor">
-        <img class="company-logo" 
-            src="images/feith_logo_computer_screen.gif" 
-            onmouseover="display_glitch_gif(this)" 
-            onmouseout="display_gif(this, 'images/feith_logo_computer_screen.gif')"/>
-      </div>
-      <div class="company-position-container">
-        <div class="company-name primary-text">Feith Systems</div>
-        <div class="position-title primary-text">Software Engineer Intern</div>
-        <div class="position-time-period primary-text">2016 to Present</div>
+
+  <div id="feith-modal" class="modal" onclick="close_modal('feith-modal')">
+    <div class="modal-container">
+      <div class="modal-close" onclick="close_modal('feith-modal')">&times</div>
+      <div class="modal-side-line-container"><div class="modal-side-line"></div></div>
+      <div class="modal-top-container">
+        <div class="modal-side-circle"></div>
+        <div>
+          <h1>Summer of 2020</h1>
+        </div>
       </div>
     </div>
   </div>

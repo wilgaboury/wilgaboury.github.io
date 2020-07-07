@@ -23,7 +23,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    z-index: 100;
+    z-index: 1;
 }
 
 .career-title-height {
@@ -88,4 +88,88 @@ body {
 
 .position-time-period {
     font-size: 30px;
+}
+
+.modal {
+    box-sizing: border-box;
+    padding: 20px;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-container {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+
+    background-color: whitesmoke;
+    border-radius: 10px;
+
+    height: 1500px;
+    padding: 25px 25px 25px 0px;
+    margin-bottom: 20px;
+
+    position: relative;
+}
+
+.modal-side-line-container {
+    position: absolute;
+    padding: 50px 25px;
+    width: 3px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 5px;
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.modal-close:hover,
+.modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.modal-side-line {
+    border-left: 3px solid black;
+    height: 100%;
+}
+
+.modal-side-circle {
+    border-radius: 50%;
+    background-color: black;
+    width: 15px;
+    min-width: 15px;
+    height: 15px;
+    margin: 19px;
+}
+
+.modal-top-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: start;
+    align-content: start;
 }
