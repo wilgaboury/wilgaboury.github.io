@@ -72,10 +72,12 @@
 
     function open_modal(id) {
       document.getElementById(id).style.display = 'block';
+      document.getElementsByTagName('body')[0].style.overflowY = 'hidden';
     }
 
     function close_modal(id) {
       document.getElementById(id).style.display = 'none';
+      document.getElementsByTagName('body')[0].style.overflowY = null;
     }
 
     function stop_propegation(event) {

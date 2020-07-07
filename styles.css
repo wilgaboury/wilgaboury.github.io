@@ -3,6 +3,10 @@ html, body {
     width: 100%;
 }
 
+body {
+    overflow-y: auto;
+}
+
 video {
     object-fit: fill;
 }
