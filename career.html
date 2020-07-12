@@ -62,7 +62,6 @@
     }
 
     window.addEventListener('load', function(event) {
-      console.log(window.innerWidth);
       if (window.innerWidth/window.devicePixelRatio > CHANGE_WIDTH) {
         change_to_zig_zag();
       } else {
@@ -84,13 +83,11 @@
       event.stopPropegation();
     }
 
-    window.addEventListener('load', function(event) {
-      for (let elem of document.getElementsByClassName('modal-container')) {
-        elem.addEventListener('click', function(event) {
-          event.stopPropagation();
-        });
-      }
-    });
+    for (let elem of document.getElementsByClassName('modal-container')) {
+      elem.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+    }
   </script>
 </head>
 
@@ -118,45 +115,6 @@
           <div class="position-time-period primary-text">2016 to Present</div>
         </div>
       </div>
-      <div class="company-container">
-        <div class="computer-monitor">
-          <img class="company-logo" 
-              src="images/feith_logo_computer_screen.gif" 
-              onmouseover="display_glitch_gif(this)" 
-              onmouseout="display_gif(this, 'images/feith_logo_computer_screen.gif')"/>
-        </div>
-        <div class="company-position-container">
-          <div class="company-name primary-text">Feith Systems</div>
-          <div class="position-title primary-text">Software Engineer Intern</div>
-          <div class="position-time-period primary-text">2016 to Present</div>
-        </div>
-      </div>
-      <div class="company-container">
-        <div class="computer-monitor">
-          <img class="company-logo" 
-              src="images/feith_logo_computer_screen.gif" 
-              onmouseover="display_glitch_gif(this)" 
-              onmouseout="display_gif(this, 'images/feith_logo_computer_screen.gif')"/>
-        </div>
-        <div class="company-position-container">
-          <div class="company-name primary-text">Feith Systems</div>
-          <div class="position-title primary-text">Software Engineer Intern</div>
-          <div class="position-time-period primary-text">2016 to Present</div>
-        </div>
-      </div>
-      <div class="company-container">
-        <div class="computer-monitor">
-          <img class="company-logo" 
-              src="images/feith_logo_computer_screen.gif" 
-              onmouseover="display_glitch_gif(this)" 
-              onmouseout="display_gif(this, 'images/feith_logo_computer_screen.gif')"/>
-        </div>
-        <div class="company-position-container">
-          <div class="company-name primary-text">Feith Systems</div>
-          <div class="position-title primary-text">Software Engineer Intern</div>
-          <div class="position-time-period primary-text">2016 to Present</div>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -167,7 +125,41 @@
       <div class="modal-top-container">
         <div class="modal-side-circle"></div>
         <div>
-          <h1>Summer of 2020</h1>
+          <h1>Summer of 2019</h1>
+          <h2>May to Augest</h2>
+          <p>
+            Worked on data recovery program for client with data migration issues.Experimented with Dockerized backend system to stream data from Oracle SQL Database to Elasticsearch. Added various features and fixes to DashboardIQ product.
+          </p>
+        </div>
+      </div>
+      <div class="modal-top-container">
+        <div class="modal-side-circle"></div>
+        <div>
+          <h1>Winter of 2018/2019</h1>
+          <h2>December to January</h2>
+          <p>
+            Added map functionality for viewing geological information using leaflet.js and calendar for visualizing date data to DashboardIQ web application. 
+          </p>
+        </div>
+      </div>
+      <div class="modal-top-container">
+        <div class="modal-side-circle"></div>
+        <div>
+          <h1>Summer of 2018</h1>
+          <h2>May to Augest</h2>
+          <p>
+            Made an interactive Gantt Chart view for editing jobs in the Task Manager web application and continued contributing code to the E2B backend. 
+          </p>
+        </div>
+      </div>
+      <div class="modal-top-container">
+        <div class="modal-side-circle"></div>
+        <div>
+          <h1>Summer of 2017</h1>
+          <h2>June to Augest</h2>
+          <p>
+            Created a program in Java to parse, validate, create, and store E2B(R3) pharmacovigilance XML files using an Oracle SQL Schema that I aided in designing.
+          </p>
         </div>
       </div>
     </div>
